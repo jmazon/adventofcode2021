@@ -18,10 +18,13 @@ lucky enough to have the following simplifiers:
 * the grid is small enough
 
 So we can just draw the lines and count, and have a solution linear in
-grid area instead of quadratic in numbre of lines.  Which, given my
+grid area instead of quadratic in number of lines.  Which, given my
 puzzle input, is more or less the same anyway.
 
-This post is literate Haskell; let's get the imports out of the way.
+This post is [literate Haskell][gh]; let's get the imports out of the
+way.
+
+[gh]: https://github.com/jmazon/adventofcode2021/blob/master/day05.lhs
 
 > import Control.Arrow   ((&&&),(***))
 > import Data.Array      (accumArray,elems)

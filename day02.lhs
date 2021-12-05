@@ -9,10 +9,11 @@ image: aoc-haskell.jpeg
 ---
 
 [The day 2 puzzle][aoc] is another of these “follow an instruction
-sequence using two different interpretations”.  This post is literate
-Haskell, so let's get the imports out of the way.
+sequence using two different interpretations”.  This post is [literate
+Haskell][gh], so let's get the imports out of the way.
 
 [aoc]: https://adventofcode.com/2021/day/2
+[gh]: https://github.com/jmazon/adventofcode2021/blob/master/day02.lhs
 
 > {-# LANGUAGE TemplateHaskell #-}
 > import Control.Arrow        ((&&&),(***))

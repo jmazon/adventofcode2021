@@ -7,14 +7,18 @@ description: Sweeping all point out of the code
 image: aoc-haskell.jpeg
 ---
 
-[Advent of Code][aoc] is back for a new season!  We're sweeping the
-ocean floor with our elven submarine's sonar, surveying zones of
-positive slope.
+[Advent of Code][aoc] is back for a new season!  For [its first
+day][aoc1], we're sweeping the ocean floor with our elven submarine's
+sonar, surveying zones of positive slope.
 
 [aoc]: https://adventofcode.com/
+[aoc1]: https://adventofcode.com/2021/day/1
 
 Seems like a perfect case to have fun with Haskell's point-free
-notation.  Let's have a few imports.
+notation.  Let's have a few imports to clear the floor for a [literate
+Haskell][gh] post.
+
+[gh]: https://github.com/jmazon/adventofcode2021/blob/master/day01.lhs
 
 > import Control.Arrow
 > import Data.List
@@ -136,8 +140,8 @@ twoParts = (part1 &&& part1 . part2proper)
 
 But wait!
 
-1. Why am I flipping `&&&` for?  I can remember the part 2 answer
-    comes before part 1's, right?
+1. What am I flipping `&&&` for?  I can remember the part 2 answer
+   comes before part 1's, right?
 2. Why am I defining anything other than `main`?  Defining a function
    and then calling is two uses of an identifier; such a waste…
 

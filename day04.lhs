@@ -8,9 +8,10 @@ image: aoc-haskell.jpeg
 ---
 
 [Today's Advent of Code][aoc] asks us to solve bingo.  Let's start
-with a few import to serve as a literal Haskell prologue.
+with a few import to serve as a [literate Haskell][gh] prologue.
 
 [aoc]: https://adventofcode.com/2021/day/4
+[gh]: https://github.com/jmazon/adventofcode2021/blob/master/day04.lhs
 
 > import Control.Arrow   ((&&&))
 > import Control.Monad   (guard)

@@ -7,12 +7,13 @@ description: Sweeping all point out of the code
 image: aoc-haskell.jpeg
 ---
 
-[Today's AoC challenge][aoc] asks us for a few statistics on a list
-of binary numbers.  This post is a literate Haskell program^[As soon
-as I get to publishing it, of course.], so let's get a few imports out
-of the way.
+[Today's AoC challenge][aoc] asks us for a few statistics on a list of
+binary numbers.  This post is a [literate Haskell
+program][gh]^[<del>As soon as I get to publishing it, of course.</del>
+Done at last.  Whew.], so let's get a few imports out of the way.
 
 [aoc]: https://adventofcode.com/2021/day/3
+[gh]: https://github.com/jmazon/adventofcode2021/blob/master/day03.lhs
 
 > import Control.Arrow ((&&&))
 > import Control.Monad (guard)
