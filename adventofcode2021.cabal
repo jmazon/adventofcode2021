@@ -1,0 +1,42 @@
+cabal-version: 1.12
+name:           adventofcode2021
+version:        2021
+author:         Jean-Baptiste Mazon
+copyright:      2021
+build-type:     Simple
+
+executable day01
+  main-is: day01.lhs
+  build-depends: base
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: TypeApplications
+
+executable day02
+  main-is: day02.lhs
+  build-depends: base, lens
+  default-language: Haskell2010
+  ghc-options: -Wall -Wno-incomplete-patterns
+  default-extensions: LambdaCase, RecordWildCards, ViewPatterns
+
+executable day03
+  main-is: day03.lhs
+  build-depends: base
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: TypeApplications
+
+executable day04
+  main-is: day04.lhs
+  build-depends: base,
+                 split
+  default-language: Haskell2010
+  ghc-options: -Wall -Wno-incomplete-patterns
+  default-extensions:
+
+executable day05
+  main-is: day05.lhs
+  build-depends: base, array, split
+  default-language: Haskell2010
+  ghc-options: -Wall -Wno-incomplete-patterns
+  default-extensions: ViewPatterns
