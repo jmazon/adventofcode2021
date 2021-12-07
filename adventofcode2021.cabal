@@ -40,3 +40,10 @@ executable day05
   default-language: Haskell2010
   ghc-options: -Wall -Wno-incomplete-patterns
   default-extensions: ViewPatterns
+
+executable day06
+  main-is: day06.lhs
+  build-depends: base, array, lens, linear, vector, split
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: DataKinds
