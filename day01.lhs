@@ -1,22 +1,22 @@
 ---
 title: "AoC Day 1: Sonar Sweep"
 author: Jean-Baptiste Mazon
-date: 2021-12-01T23:29:41-01:00
+date: 2021-12-01T23:42:14-01:00
 tags: [ "advent of code", aoc2021, haskell ]
 description: Sweeping all point out of the code
 image: aoc-haskell.jpeg
 ---
 
-[Advent of Code][aoc] is back for a new season!  For [its first
-day][aoc1], we're sweeping the ocean floor with our elven submarine's
-sonar, surveying zones of positive slope.
+[Advent of Code][aoc] is back for a new season!  For its first day,
+[“Sonar Sweep”][aoc1], we're sweeping the ocean floor with our elven
+submarine's sonar, surveying zones of positive slope.
 
 [aoc]: https://adventofcode.com/
 [aoc1]: https://adventofcode.com/2021/day/1
 
 Seems like a perfect case to have fun with Haskell's point-free
-notation.  Let's have a few imports to clear the floor for a [literate
-Haskell][gh] post.
+notation.  Let's first have a few imports to clear the floor for a
+[literate Haskell][gh] post.
 
 [gh]: https://github.com/jmazon/adventofcode2021/blob/master/day01.lhs
 
@@ -37,8 +37,8 @@ simply the tail of the other.
 \as -> zipWith (-) (tail as) as
 ```
 
-Now that `as` identifier is repeated, which is another word for
-ugly^[In the context of this post.].  But how could we simplify it
+Notice how that `as` identifier is now repeated, which is another word
+for ugly^[In the context of this post.].  But how could we simplify it
 out?
 
 The hack^[And I'm not using the word lightly.] is to make use of the
@@ -94,7 +94,7 @@ main = interact $ show . length . filter (> 0) . (zipWith (-) =<< tail) . map re
 I used the `=<<` flipped version of the operator to keep the flows
 going in the same direction overall, it's confusing enough as is.
 
-Now for part 2, we still have to perform the filtering and counting,
+Now for part 2, we still have to perform the filtering and counting,
 but this time on a sliding window of 3 consecutive depth measurements.
 A perfect opportunity for more flow programming!
 
@@ -122,12 +122,12 @@ my second star.
 But wait!  If I forget my answers and want to solve both parts again,
 I have `part1` mentioned twice in my code!  This can't do!
 
-Let's first isolate the computation of part 2 proper:
+Let's first isolate the computation of part 2 proper:
 
 > part2proper = map sum . transpose . take 3 . tails
 
 Then we'd like to solve it “elegantly” by using the same hack as for
-part 1.  But it doesn't appear to apply here, where it's the function
+part 1.  But it doesn't appear to apply here, where it's the function
 that's duplicated instead of its input.  Or could it?
 
 ``` Haskell

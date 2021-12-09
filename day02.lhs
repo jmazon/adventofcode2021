@@ -1,21 +1,20 @@
 ---
 title: "AoC Day 2: Dive!"
 author: Jean-Baptiste Mazon
-date: 2021-12-02T12:00:00+01:00
+date: 2021-12-02T08:30:51+01:00
 updated: 2021-12-05T00:40:13+01:00
 tags: [ "advent of code", aoc2021, haskell ]
 description: Making a fool of myself with lenses once again
 image: aoc-haskell.jpeg
 ---
 
-[The day 2 puzzle][aoc] is another of these “follow an instruction
-sequence using two different interpretations”.  This post is [literate
-Haskell][gh], so let's get the imports out of the way.
+The day 2 puzzle, [“Dive!”][aoc], is another of these “follow an
+instruction sequence using two different interpretations”.  This post
+is [literate Haskell][gh], so let's get the imports out of the way.
 
 [aoc]: https://adventofcode.com/2021/day/2
 [gh]: https://github.com/jmazon/adventofcode2021/blob/master/day02.lhs
 
-> {-# LANGUAGE TemplateHaskell #-}
 > import Control.Arrow        ((&&&),(***))
 > import Control.Lens         (makeLenses,Getter,(&),(+~),to,view)
 > import Control.Lens.Unsound (lensProduct)

@@ -1,16 +1,17 @@
 ---
 title: "AoC Day 3: Binary Diagnostic"
 author: Jean-Baptiste Mazon
-date: 2021-12-03T23:55:57+01:00
+date: 2021-12-03T18:43:05+01:00
 tags: [ "advent of code", aoc2021, haskell ]
 description: Sweeping all point out of the code
 image: aoc-haskell.jpeg
 ---
 
-[Today's AoC challenge][aoc] asks us for a few statistics on a list of
-binary numbers.  This post is a [literate Haskell
-program][gh]^[<del>As soon as I get to publishing it, of course.</del>
-Done at last.  Whew.], so let's get a few imports out of the way.
+Today's AoC challenge, [“Binary Diagnostic”][aoc], asks us for a few
+statistics on a list of binary numbers.  This post is a [literate
+Haskell program][gh]^[<del>As soon as I get to publishing it, of
+course.</del> Done at last.  Whew.], so let's get a few imports out of
+the way.
 
 [aoc]: https://adventofcode.com/2021/day/3
 [gh]: https://github.com/jmazon/adventofcode2021/blob/master/day03.lhs

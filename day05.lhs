@@ -1,16 +1,16 @@
 ---
 title: "AoC Day 5: Hydrothermal Venture"
 author: Jean-Baptiste Mazon
-date: 2021-12-05T14:58:56+01:00
+date: 2021-12-05T11:44:08+01:00
 tags: [ "advent of code", aoc2021, haskell ]
 description: Just implement it.
 image: aoc-haskell.jpeg
 ---
 
-For [day 5 of Advent of Code][aoc], we are to count distinct
-intersections between lines.  In the general case, this would be a
-tricky problem whose naïve solution is quadratic.  But here, we're
-lucky enough to have the following simplifiers:
+For day 5 of Advent of Code, [“Hydrothermal Venture”][aoc], we are to
+count distinct intersections between lines.  In the general case, this
+would be a tricky problem whose naïve solution is quadratic.  But
+here, we're lucky enough to have the following simplifiers:
 
 [aoc]: https://adventofcode.com/2021/day/5
 
@@ -58,7 +58,7 @@ coordinates it lies on.
 >         sgnAbs = signum &&& abs
 
 We now have all we need to “draw” the lines on a virtual grid,
-counting the number of passages.
+counting the number of overwrites.
 
 > count :: [Line] -> Int
 > count = length . filter (>= 2) . elems .

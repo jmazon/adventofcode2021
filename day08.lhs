@@ -8,10 +8,11 @@ description: It's not brute force if the search space is small
 image: aoc-haskell.jpeg
 ---
 
-For today's [Advent of Code][aoc], we're given a jumbled wiring of
-seven segment displays, the span of possible observations, and the one
-we actually want to decode.  This post is your usual [literate
-Haskell][gh], with the obligatory imports prologue.
+For today's Advent of Code, [“Seven Segment Search”][aoc], we're given
+a jumbled wiring of seven segment displays, the span of possible
+observations, and the one we actually want to decode.  This post is
+your usual [literate Haskell][gh], with the obligatory imports
+prologue.
 
 [aoc]: https://adventofcode.com/2021/day/8
 [gh]: https://github.com/jmazon/adventofcode2021/blob/master/day08.lhs
@@ -21,7 +22,7 @@ Haskell][gh], with the obligatory imports prologue.
 > import Data.Maybe    (fromJust)
 
 We are given the input as segments observed.  To make our life easier,
-let's represent them as 0-6 integers instead of a-g:
+let's represent them as integers 0 to 6 instead of letters a to g:
 
 > type Segment = Int
 > newtype Observation = Observation { view :: [Segment] }
@@ -36,14 +37,15 @@ to numeric:
 > readObservation :: String -> Observation
 > readObservation = Observation . map (subtract (fromEnum 'a') . fromEnum)
 
-An observation correponds to a one-on-one mapping of segments to wires
-activated.  The central system commanding the wires only activates
-them in patterns of valid digits.
+An observation is a one-on-one mapping of segments to wires activated.
+The central system that commands the wires only activates them in
+patterns of valid digits.
 
 > type Wire = Int
 > newtype Digit = Digit [Wire] deriving (Eq,Ord)
 
-We are given the valid patterns.  To be able to compare them with one another, I'll sort them before wrapping in the `Digit` newtype.
+We are given the valid patterns.  To be able to compare them with one
+another, I'll sort them before wrapping in the `Digit` newtype.
 
 > combine :: Observation -> Digit
 > combine = Digit . sort . view
@@ -70,8 +72,8 @@ iterate over it until we find a match…
 >       Just perm = find ((== sort reference) . sort . flip permute obsDigits)
 >                   (permutations [0..6])
 
-…and apply the same permutation to look up the digits in our reference
-table.
+…and apply the singled out permutation to look up the digits in our
+reference table.
 
 >   in map (fromJust . (`elemIndex` reference)) (permute perm obsDisplay)
 

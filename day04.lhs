@@ -1,14 +1,15 @@
 ---
 title: "AoC Day 4: Giant Squid"
 author: Jean-Baptiste Mazon
-date: 2021-12-04T18:36:48+01:00
+date: 2021-12-04T18:04:01+01:00
 tags: [ "advent of code", aoc2021, haskell ]
 description: And squiddo was his name-o.
 image: aoc-haskell.jpeg
 ---
 
-[Today's Advent of Code][aoc] asks us to solve bingo.  Let's start
-with a few import to serve as a [literate Haskell][gh] prologue.
+Today's Advent of Code problem, [“Giant Squid”][aoc], asks us to solve
+bingo.  Let's start with a few import to serve as a [literate
+Haskell][gh] prologue.
 
 [aoc]: https://adventofcode.com/2021/day/4
 [gh]: https://github.com/jmazon/adventofcode2021/blob/master/day04.lhs
@@ -29,7 +30,7 @@ The input format is very readable, which is all too often synonymous
 with painful to parse.  For simplicity, I'll assume the caller would
 already have it split by words, which separates the numbers' order
 nicely as a huge first word.  I then split it on commas, and form the
-boards by repeated application of `chunksOf 5`.
+boards by nested application of `chunksOf 5`.
 
 > parse :: [String] -> ([Int],[Board])
 > parse ( order : boards ) =

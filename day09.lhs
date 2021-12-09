@@ -27,7 +27,7 @@ spare typing.
 
 > type Pos = (Int,Int)
 > type Height = Int
-> type Cave = Array (Int,Int)
+> type Cave = Array Pos
 
 Finding a low point is a matter of examining each point and validating
 its context for minimality.^[Yes, I'm aware this is an invitation to
