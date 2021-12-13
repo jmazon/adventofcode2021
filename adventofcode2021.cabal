@@ -82,3 +82,14 @@ executable day11
   default-language: Haskell2010
   ghc-options: -Wall
   default-extensions:
+
+executable day12
+  main-is: day12.lhs
+  build-depends: base, containers, mtl
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions:
+      FlexibleContexts
+    , ScopedTypeVariables
+    , TypeApplications
+    , ViewPatterns
