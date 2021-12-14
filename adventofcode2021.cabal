@@ -100,3 +100,10 @@ executable day13
   default-language: Haskell2010
   ghc-options: -Wall
   default-extensions: LambdaCase, ViewPatterns
+
+executable day14
+  main-is: day14.lhs
+  build-depends: base, containers
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: ViewPatterns
