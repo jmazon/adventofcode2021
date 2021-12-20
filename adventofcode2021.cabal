@@ -121,3 +121,10 @@ executable day16
   default-language: Haskell2010
   ghc-options: -Wall
   default-extensions: DeriveFoldable, LambdaCase
+
+executable day17
+  main-is: day17.lhs
+  build-depends: base, regex-posix
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: RecordWildCards
