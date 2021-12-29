@@ -149,3 +149,10 @@ executable day20
   default-language: Haskell2010
   ghc-options: -Wall
   default-extensions: FlexibleContexts, ViewPatterns
+
+executable day21
+  main-is: day21.lhs
+  build-depends: base, free, lens, mtl, multiset, transformers
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: DeriveFunctor, FlexibleContexts, LambdaCase, RecordWildCards, TemplateHaskell, ViewPatterns
