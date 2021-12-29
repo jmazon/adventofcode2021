@@ -164,3 +164,10 @@ executable day22
   ghc-options: -Wall
   default-extensions: FlexibleContexts
 
+executable day23
+  main-is: day23.lhs
+  build-depends: array, base, containers
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: ViewPatterns,TupleSections
+
