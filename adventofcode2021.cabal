@@ -177,3 +177,10 @@ executable day24
   default-language: Haskell2010
   ghc-options: -Wall
   default-extensions: ViewPatterns
+
+executable day25
+  main-is: day25.lhs
+  build-depends: base, array
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: LambdaCase, ViewPatterns
