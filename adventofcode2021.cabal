@@ -171,3 +171,9 @@ executable day23
   ghc-options: -Wall
   default-extensions: ViewPatterns,TupleSections
 
+executable day24
+  main-is: day24.lhs
+  build-depends: base, containers
+  default-language: Haskell2010
+  ghc-options: -Wall
+  default-extensions: ViewPatterns
